@@ -108,7 +108,7 @@
                 export PYPI_DATA=${inp.pypi-deps-db}
                 export CONDA_DATA=${(import ./mach_nix/nix/conda-channels.nix {
                   inherit pkgs;
-                  providers = { _default = [ "conda/main" "conda/r" "conda/conda-forge"]; };
+                  providers = { _default = [ "conda/main" "conda/r" "conda/conda-forge" "conda/pyg"]; };
                 }).condaChannelsJson}
 
                 # Use "python -m pytest" to add current directory to python path.
