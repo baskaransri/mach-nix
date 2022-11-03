@@ -26,7 +26,7 @@
           pkgs = nixpkgs.legacyPackages.${system};
           mach-nix-default = import ./default.nix {
             inherit pkgs dataOutdated;
-            pypiData = inp.pypi-deps-db;
+            pypiData = inp.pypi-deps-db;}{
             condaChannelsExtra = ["pyg"];
           };
         in rec
