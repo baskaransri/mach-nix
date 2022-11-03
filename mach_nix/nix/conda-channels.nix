@@ -1,5 +1,5 @@
 {
-  condaChannelsExtra ? {},
+  condaChannelsExtra ? ["conda/pyg"],
   pkgs ? import (import ./nixpkgs-src.nix) {},
   providers ? builtins.fromJSON (builtins.readFile (builtins.getEnv "providers")),
   system ? "x86_64-linux",
